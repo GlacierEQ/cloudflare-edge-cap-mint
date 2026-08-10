@@ -1,0 +1,12 @@
+{
+  "schema": "glaciereq.repo-capabilities.v1",
+  "repository": "GlacierEQ/cloudflare-edge-cap-mint",
+  "capabilities": [
+    {
+      "id": "edge-cap-mint",
+      "name": "Edge Cap Mint",
+      "status": "SCAFFOLD",
+      "module": "src/edge_cap_mint.py"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/cloudflare-edge-cap-mint",
+  "source_sha": "9bd6fb0ea0996b2bf4d798a1fe27eab55d0ff6ffd64d4ec4f73b3fffb8048309",
+  "proof_receipt_digest": "675d24ed39a97983d333b6aeb1fdd3c3bd55c1dde7f1b4cebd3e5d7bcb3bfeca",
+  "not_after": 1788948645.507529,
+  "mac": "75278dd9a0e0c3cb740535f1e16ee9b40bfeb1e6b3d8e2e49d10ae67de8d0baa",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true,
+  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
+}
