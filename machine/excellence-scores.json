@@ -3,10 +3,31 @@
   "repository": "GlacierEQ/cloudflare-edge-cap-mint",
   "never_collapse": true,
   "axes": {
-    "target_architecture": {"grade": "A", "evidence": ["ARCHITECTURE.md", "machine/architecture.json"]},
-    "current_proof": {"status": "PENDING_CURRENT_HEAD"},
-    "adversarial_depth": {"grade": "A", "cases": 14, "evidence": "machine/verification-matrix.json"},
-    "portfolio_boundary_truth": {"grade": "A"},
-    "canonical_position": {"status": "PENDING_ESTATE_RESOLUTION", "role": "IMPLEMENTED_LEAF_UNPROMOTED"}
+    "target_architecture": {
+      "grade": "A",
+      "evidence": ["ARCHITECTURE.md", "machine/architecture.json"]
+    },
+    "current_proof": {
+      "grade": "A",
+      "evidence": [
+        "machine/implementation-proof.json",
+        "machine/proof_receipt.json",
+        "machine/operability_receipt.json",
+        "CI artifact 9090034603"
+      ]
+    },
+    "adversarial_depth": {
+      "grade": "A",
+      "cases": 14,
+      "evidence": "machine/verification-matrix.json"
+    },
+    "portfolio_boundary_truth": {
+      "grade": "A",
+      "evidence": "external authority and production boundaries explicitly unclaimed"
+    },
+    "canonical_position": {
+      "status": "PENDING_ESTATE_RESOLUTION",
+      "role": "PROVEN_LEAF_UNPROMOTED"
+    }
   }
 }

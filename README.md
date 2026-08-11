@@ -71,20 +71,39 @@ See `ARCHITECTURE.md` for the expert design, threat model, attenuation law, rece
 |---|---|
 | Core mechanism | `src/edge_cap_mint.py` |
 | Direct operate flow | `scripts/operate.py` |
+| Canonical source hash utility | `scripts/source_sha.py` |
 | Behavioral tests | `tests/test_edge_cap_mint.py` |
 | Adversarial tests | `tests/test_adversarial.py` |
 | Expert architecture | `ARCHITECTURE.md` |
 | Machine architecture | `machine/architecture.json` |
 | Verification matrix | `machine/verification-matrix.json` |
+| Source-bound proof | `machine/implementation-proof.json` |
+| Sanitized proof receipt | `machine/proof_receipt.json` |
+| Operability receipt | `machine/operability_receipt.json` |
 | Target contract | `machine/target-contract.json` |
 | Excellence state | `machine/excellence-state.json` |
 | Engineering handoff | `DEV_UP_INSTRUCTIONS.md` |
 
-## Current state
+## Current proof state
 
-The former Wave C scaffold promotion is revoked. The real mechanism is **IMPLEMENTED** and is being driven through current-source proof.
+The repository-local mechanism is **PROOF_REPRODUCED**.
 
-No local promotion secret or stale scaffold proof is retained.
+- CI-produced canonical implementation source SHA: `c7b84391e7668e34550dca0d9c2f94d82daf65e330acf1e8a28ea778025d9dcc`
+- proof source commit: `df2116782827edd752f4dab6f97f33486a31e4b6`
+- GitHub Actions proof run: `31461779549`
+- CI source-hash artifact: `9090034603`
+- behavioral cases: **8**
+- domain adversarial cases: **14**
+- total tests: **22/22 PASS**
+- direct mint/delegate/use/revoke flow: **PASS**
+- stale scaffold proof and leaf-local promotion authority: **removed**
+
+Only estate-level gates remain before any future `PROMOTED` claim:
+
+- external authenticated promotion authority
+- canonical estate-position resolution
+
+Those gates are intentionally outside the public leaf; the repository does not mint its own promotion authority.
 
 ## Non-claims
 

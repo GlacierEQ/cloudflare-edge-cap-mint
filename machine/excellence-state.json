@@ -1,7 +1,7 @@
 {
   "schema": "glaciereq.repo-excellence-state.v1",
   "repository": "GlacierEQ/cloudflare-edge-cap-mint",
-  "principal_state": "IMPLEMENTED",
+  "principal_state": "PROOF_REPRODUCED",
   "gates": {
     "IDENTITY_RESOLVED": {"status": "PASS", "evidence": "github GlacierEQ/cloudflare-edge-cap-mint"},
     "PROBLEM_VERIFIED": {"status": "PASS", "evidence": "edge authority attenuation bottleneck"},
@@ -9,29 +9,26 @@
     "DONOR_PLAN_RESOLVED": {"status": "PASS", "evidence": "fail-closed canonicalization and external authority boundary"},
     "VERTICAL_SLICE_ALIVE": {"status": "PASS", "evidence": "mint/delegate/use/revoke direct flow"},
     "CENTRAL_MECHANISM_PRESENT": {"status": "PASS", "evidence": "monotone capability attenuation engine"},
-    "DETERMINISTIC_PROOF_GREEN": {"status": "PENDING"},
-    "ADVERSARIAL_SURVIVAL": {"status": "PENDING"},
-    "OPERABLE_AND_OBSERVABLE": {"status": "PENDING"},
-    "PROOF_RECEIPT_BOUND": {"status": "PENDING"},
-    "AUTHORITY_BOUND": {"status": "PENDING", "evidence": "external promotion authority required"},
-    "PROJECTION_TRUTH_CLOSED": {"status": "PASS", "evidence": "docs and machine state describe implemented unpromoted boundary"},
+    "DETERMINISTIC_PROOF_GREEN": {"status": "PASS", "evidence": "machine/implementation-proof.json source_sha=c7b84391e7668e34550dca0d9c2f94d82daf65e330acf1e8a28ea778025d9dcc"},
+    "ADVERSARIAL_SURVIVAL": {"status": "PASS", "evidence": "14 domain adversarial cases"},
+    "OPERABLE_AND_OBSERVABLE": {"status": "PASS", "evidence": "scripts/operate.py PASS in GitHub Actions run 31461779549"},
+    "PROOF_RECEIPT_BOUND": {"status": "PASS", "evidence": "CI-produced source digest artifact 9090034603 + sanitized machine/proof_receipt.json"},
+    "AUTHORITY_BOUND": {"status": "PENDING", "evidence": "external promotion authority required; no leaf-local signing secret"},
+    "PROJECTION_TRUTH_CLOSED": {"status": "PASS", "evidence": "README, contract, capabilities, proof, architecture, and state agree"},
     "CANONICAL_POSITION_RESOLVED": {"status": "PENDING"},
-    "EVOLUTION_CURSOR_DEFINED": {"status": "PASS", "evidence": "next:current_source_bound_proof"}
+    "EVOLUTION_CURSOR_DEFINED": {"status": "PASS", "evidence": "next:external_authority_and_estate_position_only"}
   },
-  "history": [{
-    "at": "2026-08-10",
-    "from": "PROMOTED",
-    "to": "IMPLEMENTED",
-    "gate": "PROMOTION_INVARIANT",
-    "result": "REVOKED_STALE_SCAFFOLD_PROMOTION",
-    "note": "generic scaffold promotion invalid; real edge capability mechanism bodybuilt"
-  }],
+  "history": [
+    {"at": "2026-08-10", "from": "PROMOTED", "to": "IMPLEMENTED", "gate": "PROMOTION_INVARIANT", "result": "REVOKED_STALE_SCAFFOLD_PROMOTION"},
+    {"at": "2026-08-10", "from": "IMPLEMENTED", "to": "PROOF_REPRODUCED", "gate": "CURRENT_SOURCE_BOUND_PROOF", "result": "PASS", "note": "behavioral=8; adversarial=14; operate=PASS; source_sha=c7b84391e7668e34550dca0d9c2f94d82daf65e330acf1e8a28ea778025d9dcc"}
+  ],
   "prior_state_ref": {"commit": "a56b0e2c08c5828a4c0c990eadbe67a96dee7d0b", "principal_state": "PROMOTED", "revoked": true},
   "contract_ref": "machine/target-contract.json",
   "scores_ref": "machine/excellence-scores.json",
-  "evolution_cursor": "next:fresh_behavioral_adversarial_operate_proof",
-  "wave": {"id": "WAVE-C-2026-08-10", "group": "C", "phase": "BODYBUILT_IMPLEMENTED", "prior_promotion_revoked": true, "policy": "glaciereq.repo-excellence.promotion-policy.v2"},
+  "implementation_proof_ref": "machine/implementation-proof.json",
+  "evolution_cursor": "next:external_promotion_authority_and_canonical_position",
+  "wave": {"id": "WAVE-C-2026-08-10", "group": "C", "phase": "PROOF_REPRODUCED", "prior_promotion_revoked": true, "policy": "glaciereq.repo-excellence.promotion-policy.v2"},
   "scaffold": false,
   "promotion_eligible": false,
-  "promotion_blockers": ["CURRENT_HEAD_IMPLEMENTATION_PROOF_PENDING", "EXTERNAL_PROMOTION_AUTHORITY_PENDING", "CANONICAL_POSITION_RESOLVED"]
+  "promotion_blockers": ["EXTERNAL_PROMOTION_AUTHORITY_PENDING", "CANONICAL_POSITION_RESOLVED"]
 }

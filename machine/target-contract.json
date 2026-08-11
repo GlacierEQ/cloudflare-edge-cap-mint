@@ -1,9 +1,61 @@
 {
   "schema": "glaciereq.repo-target-contract.v2",
-  "identity": {"repository_id": "GlacierEQ/cloudflare-edge-cap-mint", "family": "elite-estate"},
-  "current": {"state": "IMPLEMENTED", "implemented": true, "tested": false, "deployed": false},
-  "mechanism": {"name": "Edge Cap Mint", "property": "monotone capability attenuation", "dimensions": ["principal", "zone", "route", "method", "region", "time", "request_budget", "delegation_depth", "nonce", "parent_digest"]},
-  "invariants": ["authority issuer external", "no scope expansion", "mint replay refused", "request replay refused", "claim tampering refused", "revocation fails closed", "canonicalization fails closed"],
-  "promotion": {"require_current_head_implementation_proof": true, "require_external_authority": true, "require_canonical_position": true},
-  "nonclaims": ["no Cloudflare affiliation", "no production deployment", "no claim of Cloudflare internal authorization equivalence"]
+  "identity": {
+    "repository_id": "GlacierEQ/cloudflare-edge-cap-mint",
+    "family": "elite-estate"
+  },
+  "current": {
+    "state": "PROOF_REPRODUCED",
+    "implemented": true,
+    "tested": true,
+    "proof_reproduced": true,
+    "deployed": false
+  },
+  "mechanism": {
+    "name": "Edge Cap Mint",
+    "property": "monotone capability attenuation",
+    "dimensions": [
+      "principal",
+      "zone",
+      "route",
+      "method",
+      "region",
+      "time",
+      "request_budget",
+      "delegation_depth",
+      "nonce",
+      "parent_digest"
+    ]
+  },
+  "invariants": [
+    "authority issuer external",
+    "no scope expansion",
+    "mint replay refused",
+    "request replay refused",
+    "claim tampering refused",
+    "revocation fails closed",
+    "canonicalization fails closed"
+  ],
+  "proof": {
+    "implementation_proof_ref": "machine/implementation-proof.json",
+    "source_sha": "c7b84391e7668e34550dca0d9c2f94d82daf65e330acf1e8a28ea778025d9dcc",
+    "behavioral_cases": 8,
+    "adversarial_cases": 14,
+    "operate": "PASS",
+    "workflow_run_id": 31461779549,
+    "source_sha_artifact_id": 9090034603
+  },
+  "promotion": {
+    "require_current_head_implementation_proof": true,
+    "current_head_implementation_proof": "PASS",
+    "require_external_authority": true,
+    "external_authority": "PENDING",
+    "require_canonical_position": true,
+    "canonical_position": "PENDING"
+  },
+  "nonclaims": [
+    "no Cloudflare affiliation",
+    "no production deployment",
+    "no claim of Cloudflare internal authorization equivalence"
+  ]
 }

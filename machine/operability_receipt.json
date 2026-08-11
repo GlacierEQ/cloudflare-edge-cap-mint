@@ -1,0 +1,16 @@
+{
+  "schema": "glaciereq.operability-receipt.v2",
+  "repository": "GlacierEQ/cloudflare-edge-cap-mint",
+  "source_sha": "c7b84391e7668e34550dca0d9c2f94d82daf65e330acf1e8a28ea778025d9dcc",
+  "source_commit": "df2116782827edd752f4dab6f97f33486a31e4b6",
+  "workflow_run_id": 31461779549,
+  "entry": "scripts/operate.py",
+  "result": "PASS",
+  "scenarios": [
+    {"name": "root_grant_to_attenuated_capability", "expected": "ALLOW"},
+    {"name": "in_scope_edge_use", "expected": "ALLOW"},
+    {"name": "delegated_stricter_child", "expected": "ALLOW"},
+    {"name": "child_method_scope_expansion", "expected": "REFUSE"},
+    {"name": "revoked_capability_use", "expected": "REFUSE"}
+  ]
+}

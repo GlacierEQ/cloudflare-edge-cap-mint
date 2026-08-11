@@ -1,0 +1,16 @@
+{
+  "schema": "glaciereq.proof-receipt.v2",
+  "repository": "GlacierEQ/cloudflare-edge-cap-mint",
+  "source_sha": "c7b84391e7668e34550dca0d9c2f94d82daf65e330acf1e8a28ea778025d9dcc",
+  "source_commit": "df2116782827edd752f4dab6f97f33486a31e4b6",
+  "workflow_run_id": 31461779549,
+  "source_sha_artifact_id": 9090034603,
+  "environment": {"runner": "ubuntu-latest", "python": "3.12"},
+  "commands": ["python -m pytest -q", "python scripts/operate.py", "python scripts/source_sha.py"],
+  "behavioral_cases": 8,
+  "adversarial_cases": 14,
+  "result": "PASS",
+  "sanitized": true,
+  "absolute_local_paths": false,
+  "limitations": ["reference implementation", "external root-grant cryptographic verification is out of leaf boundary", "no production edge side effects"]
+}
