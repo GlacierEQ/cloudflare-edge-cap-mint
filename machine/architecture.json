@@ -1,0 +1,12 @@
+{
+  "schema": "glaciereq.machine-architecture.v1",
+  "repository": "GlacierEQ/cloudflare-edge-cap-mint",
+  "mechanism": "Edge Cap Mint",
+  "security_property": "monotone capability attenuation",
+  "parent_types": ["VerifiedAuthorityGrant", "EdgeCapability"],
+  "attenuation_dimensions": ["principal_exact", "zone_exact", "route_subset", "method_subset", "region_subset", "expiry_nonexpanding", "request_budget_nonexpanding", "delegation_depth_decreasing"],
+  "mint_controls": ["external_issuer", "verification_ref", "time_window", "mint_nonce_replay", "parent_revocation", "canonical_claim_digest"],
+  "use_controls": ["claim_digest_recompute", "revocation", "time_window", "principal", "zone", "route", "method", "region", "request_nonce_replay", "request_budget", "canonical_metadata"],
+  "receipt_chain": "child digest binds parent digest; use receipt binds capability digest and request inputs",
+  "deployment_boundaries": ["external cryptographic grant verification", "distributed nonce and usage ledger", "global revocation propagation", "edge side-effect adapter"]
+}

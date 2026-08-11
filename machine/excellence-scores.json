@@ -1,20 +1,12 @@
 {
-  "schema": "glaciereq.repo-excellence-scores.v1",
+  "schema": "glaciereq.repo-excellence-scores.v2",
   "repository": "GlacierEQ/cloudflare-edge-cap-mint",
   "never_collapse": true,
   "axes": {
-    "target_architecture": {
-      "grade": "B"
-    },
-    "current_proof": {
-      "grade": "A"
-    },
-    "company_fit": {
-      "score": 0.0
-    },
-    "canonical_confidence": {
-      "score": 0.0,
-      "role": "PROMOTED_LEAF"
-    }
+    "target_architecture": {"grade": "A", "evidence": ["ARCHITECTURE.md", "machine/architecture.json"]},
+    "current_proof": {"status": "PENDING_CURRENT_HEAD"},
+    "adversarial_depth": {"grade": "A", "cases": 14, "evidence": "machine/verification-matrix.json"},
+    "portfolio_boundary_truth": {"grade": "A"},
+    "canonical_position": {"status": "PENDING_ESTATE_RESOLUTION", "role": "IMPLEMENTED_LEAF_UNPROMOTED"}
   }
 }

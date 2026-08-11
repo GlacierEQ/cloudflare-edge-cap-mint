@@ -1,2 +1,2 @@
-# stdlib-first scaffold — add pins only when implementation needs them
+# Test-only dependency; the mechanism itself is stdlib-only.
 pytest>=8.0
