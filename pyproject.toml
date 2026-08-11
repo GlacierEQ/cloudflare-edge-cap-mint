@@ -1,7 +1,7 @@
 [project]
 name = "cloudflare-edge-cap-mint"
-version = "0.0.1"
-description = "Scaffold: Edge Cap Mint (independent Cloudflare lens)"
+version = "0.1.0"
+description = "Deterministic edge capability attenuation and admission reference mechanism"
 requires-python = ">=3.11"
 dependencies = []
 

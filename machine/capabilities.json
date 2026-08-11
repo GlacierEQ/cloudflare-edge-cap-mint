@@ -1,12 +1,29 @@
 {
-  "schema": "glaciereq.repo-capabilities.v1",
+  "schema": "glaciereq.repo-capabilities.v2",
   "repository": "GlacierEQ/cloudflare-edge-cap-mint",
   "capabilities": [
     {
-      "id": "edge-cap-mint",
-      "name": "Edge Cap Mint",
-      "status": "SCAFFOLD",
-      "module": "src/edge_cap_mint.py"
+      "id": "edge-capability-attenuation",
+      "name": "Edge Capability Attenuation",
+      "status": "PROVEN",
+      "module": "src/edge_cap_mint.py",
+      "implementation_proof_ref": "machine/implementation-proof.json",
+      "guarantees": [
+        "principal and zone exact binding",
+        "segment-aware route attenuation",
+        "HTTP method and edge-region attenuation",
+        "TTL and request-budget attenuation",
+        "delegation-depth attenuation",
+        "mint and request replay refusal",
+        "capability-claim digest tamper detection",
+        "revocation",
+        "deterministic mint and use receipts"
+      ]
     }
-  ]
+  ],
+  "authority_model": {
+    "issuer": "external-edge-authority",
+    "leaf_mints_promotion_authority": false,
+    "public_signing_secret_present": false
+  }
 }

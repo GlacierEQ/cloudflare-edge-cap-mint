@@ -1,182 +1,34 @@
 {
   "schema": "glaciereq.repo-excellence-state.v1",
   "repository": "GlacierEQ/cloudflare-edge-cap-mint",
-  "principal_state": "PROMOTED",
+  "principal_state": "PROOF_REPRODUCED",
   "gates": {
-    "IDENTITY_RESOLVED": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "github GlacierEQ/cloudflare-edge-cap-mint"
-    },
-    "PROBLEM_VERIFIED": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "README/ISSUE_CONTRACT problem bound"
-    },
-    "TARGET_CONTRACT_FROZEN": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "machine/target-contract.json"
-    },
-    "DONOR_PLAN_RESOLVED": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "elite bar seed; donor_reuse=none"
-    },
-    "VERTICAL_SLICE_ALIVE": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "src mechanism + scripts/operate.py"
-    },
-    "CENTRAL_MECHANISM_PRESENT": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "central mechanism in src/"
-    },
-    "DETERMINISTIC_PROOF_GREEN": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "dual-run green tests"
-    },
-    "ADVERSARIAL_SURVIVAL": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "tests/test_adversarial.py"
-    },
-    "OPERABLE_AND_OBSERVABLE": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "scripts/operate.py dual-run PASS; primary ok"
-    },
-    "PROOF_RECEIPT_BOUND": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "proof_receipt digest=675d24ed39a97983\u2026 entry=unittest"
-    },
-    "AUTHORITY_BOUND": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "promotion_authority.json local HMAC grant"
-    },
-    "PROJECTION_TRUTH_CLOSED": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "operable=scripts/operate.py dual-run PASS; primary ok; proof=proof_receipt digest=675d24ed39a97983\u2026 entry=unittest; authority=promotion_authority.json local HMAC grant; claim_ceiling=leaf-native; projection_role=monolith_projection_only"
-    },
-    "CANONICAL_POSITION_RESOLVED": {
-      "status": "PENDING"
-    },
-    "EVOLUTION_CURSOR_DEFINED": {
-      "status": "PASS",
-      "at": "2026-08-10T10:10Z",
-      "evidence": "elite estate elevator"
-    }
+    "IDENTITY_RESOLVED": {"status": "PASS", "evidence": "github GlacierEQ/cloudflare-edge-cap-mint"},
+    "PROBLEM_VERIFIED": {"status": "PASS", "evidence": "edge authority attenuation bottleneck"},
+    "TARGET_CONTRACT_FROZEN": {"status": "PASS", "evidence": "machine/target-contract.json v2"},
+    "DONOR_PLAN_RESOLVED": {"status": "PASS", "evidence": "fail-closed canonicalization and external authority boundary"},
+    "VERTICAL_SLICE_ALIVE": {"status": "PASS", "evidence": "mint/delegate/use/revoke direct flow"},
+    "CENTRAL_MECHANISM_PRESENT": {"status": "PASS", "evidence": "monotone capability attenuation engine"},
+    "DETERMINISTIC_PROOF_GREEN": {"status": "PASS", "evidence": "machine/implementation-proof.json source_sha=c7b84391e7668e34550dca0d9c2f94d82daf65e330acf1e8a28ea778025d9dcc"},
+    "ADVERSARIAL_SURVIVAL": {"status": "PASS", "evidence": "14 domain adversarial cases"},
+    "OPERABLE_AND_OBSERVABLE": {"status": "PASS", "evidence": "scripts/operate.py PASS in GitHub Actions run 31461779549"},
+    "PROOF_RECEIPT_BOUND": {"status": "PASS", "evidence": "CI-produced source digest artifact 9090034603 + sanitized machine/proof_receipt.json"},
+    "AUTHORITY_BOUND": {"status": "PENDING", "evidence": "external promotion authority required; no leaf-local signing secret"},
+    "PROJECTION_TRUTH_CLOSED": {"status": "PASS", "evidence": "README, contract, capabilities, proof, architecture, and state agree"},
+    "CANONICAL_POSITION_RESOLVED": {"status": "PENDING"},
+    "EVOLUTION_CURSOR_DEFINED": {"status": "PASS", "evidence": "next:external_authority_and_estate_position_only"}
   },
   "history": [
-    {
-      "at": "2026-08-10T10:10Z",
-      "from": "DISCOVERED",
-      "to": "IDENTITY_RESOLVED",
-      "gate": "IDENTITY_RESOLVED",
-      "result": "PASS",
-      "note": "github GlacierEQ/cloudflare-edge-cap-mint"
-    },
-    {
-      "at": "2026-08-10T10:10Z",
-      "from": "IDENTITY_RESOLVED",
-      "to": "PROBLEM_VERIFIED",
-      "gate": "PROBLEM_VERIFIED",
-      "result": "PASS",
-      "note": "README/ISSUE_CONTRACT problem bound"
-    },
-    {
-      "at": "2026-08-10T10:10Z",
-      "from": "PROBLEM_VERIFIED",
-      "to": "TARGET_CONTRACTED",
-      "gate": "TARGET_CONTRACT_FROZEN",
-      "result": "PASS",
-      "note": "machine/target-contract.json"
-    },
-    {
-      "at": "2026-08-10T10:10Z",
-      "from": "TARGET_CONTRACTED",
-      "to": "SEEDED",
-      "gate": "DONOR_PLAN_RESOLVED",
-      "result": "PASS",
-      "note": "elite bar seed; donor_reuse=none"
-    },
-    {
-      "at": "2026-08-10T10:10Z",
-      "from": "SEEDED",
-      "to": "VERTICAL_SLICE",
-      "gate": "VERTICAL_SLICE_ALIVE",
-      "result": "PASS",
-      "note": "src mechanism + scripts/operate.py"
-    },
-    {
-      "at": "2026-08-10T10:10Z",
-      "from": "VERTICAL_SLICE",
-      "to": "IMPLEMENTED",
-      "gate": "CENTRAL_MECHANISM_PRESENT",
-      "result": "PASS",
-      "note": "central mechanism in src/"
-    },
-    {
-      "at": "2026-08-10T10:10Z",
-      "from": "IMPLEMENTED",
-      "to": "TESTED",
-      "gate": "DETERMINISTIC_PROOF_GREEN",
-      "result": "PASS",
-      "note": "dual-run green tests"
-    },
-    {
-      "at": "2026-08-10T10:10Z",
-      "from": "TESTED",
-      "to": "ADVERSARIAL_VERIFIED",
-      "gate": "ADVERSARIAL_SURVIVAL",
-      "result": "PASS",
-      "note": "tests/test_adversarial.py"
-    },
-    {
-      "at": "2026-08-10T10:10Z",
-      "from": "ADVERSARIAL_VERIFIED",
-      "to": "OPERABLE",
-      "gate": "OPERABLE_AND_OBSERVABLE",
-      "result": "PASS",
-      "note": "scripts/operate.py dual-run PASS; primary ok"
-    },
-    {
-      "at": "2026-08-10T10:10Z",
-      "from": "OPERABLE",
-      "to": "PROOF_REPRODUCED",
-      "gate": "PROOF_RECEIPT_BOUND",
-      "result": "PASS",
-      "note": "proof_receipt digest=675d24ed39a97983\u2026 entry=unittest"
-    },
-    {
-      "at": "2026-08-10T10:10Z",
-      "from": "PROOF_REPRODUCED",
-      "to": "PROMOTED",
-      "gate": "AUTHORITY_BOUND",
-      "result": "PASS",
-      "note": "promotion_authority.json local HMAC grant"
-    }
+    {"at": "2026-08-10", "from": "PROMOTED", "to": "IMPLEMENTED", "gate": "PROMOTION_INVARIANT", "result": "REVOKED_STALE_SCAFFOLD_PROMOTION"},
+    {"at": "2026-08-10", "from": "IMPLEMENTED", "to": "PROOF_REPRODUCED", "gate": "CURRENT_SOURCE_BOUND_PROOF", "result": "PASS", "note": "behavioral=8; adversarial=14; operate=PASS; source_sha=c7b84391e7668e34550dca0d9c2f94d82daf65e330acf1e8a28ea778025d9dcc"}
   ],
+  "prior_state_ref": {"commit": "a56b0e2c08c5828a4c0c990eadbe67a96dee7d0b", "principal_state": "PROMOTED", "revoked": true},
   "contract_ref": "machine/target-contract.json",
   "scores_ref": "machine/excellence-scores.json",
-  "evolution_cursor": "next:canonical_position_only_if_estate_role_resolved",
-  "wave": {
-    "id": "WAVE-C-2026-08-10",
-    "label": "Wave C \u2014 Innovation scaffold excellence group",
-    "group": "C",
-    "phase": "PROMOTED",
-    "enrolled_at": "2026-08-10T1002Z",
-    "promoted_at": "2026-08-10T1010Z",
-    "policy": "glaciereq.repo-excellence.promotion-policy.v1",
-    "proof_ok": true,
-    "operable_ok": true,
-    "projection_truth_closed_at": "2026-08-10T1010Z"
-  },
-  "excellence_group": "C",
-  "scaffold": false
+  "implementation_proof_ref": "machine/implementation-proof.json",
+  "evolution_cursor": "next:external_promotion_authority_and_canonical_position",
+  "wave": {"id": "WAVE-C-2026-08-10", "group": "C", "phase": "PROOF_REPRODUCED", "prior_promotion_revoked": true, "policy": "glaciereq.repo-excellence.promotion-policy.v2"},
+  "scaffold": false,
+  "promotion_eligible": false,
+  "promotion_blockers": ["EXTERNAL_PROMOTION_AUTHORITY_PENDING", "CANONICAL_POSITION_RESOLVED"]
 }

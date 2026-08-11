@@ -1,26 +1,16 @@
 {
-  "schema": "glaciereq.operability-receipt.v1",
+  "schema": "glaciereq.operability-receipt.v2",
   "repository": "GlacierEQ/cloudflare-edge-cap-mint",
-  "at": "2026-08-10T10:10Z",
-  "source_sha": "9bd6fb0ea0996b2bf4d798a1fe27eab55d0ff6ffd64d4ec4f73b3fffb8048309",
+  "source_sha": "c7b84391e7668e34550dca0d9c2f94d82daf65e330acf1e8a28ea778025d9dcc",
+  "source_commit": "df2116782827edd752f4dab6f97f33486a31e4b6",
+  "workflow_run_id": 31461779549,
   "entry": "scripts/operate.py",
-  "primary_output": {
-    "module": "edge_cap_mint",
-    "ok": true,
-    "repository": "GlacierEQ/cloudflare-edge-cap-mint",
-    "smoke": {
-      "args": [
-        "EdgeCapMintRequest(subject_id='sample_su"
-      ],
-      "content_checked": true,
-      "invoked": true,
-      "kind": "class",
-      "method": "evaluate",
-      "module_local": true,
-      "name": "EdgeCapMint",
-      "result": "EdgeCapMintReceipt(decision=<Decision.ALLOW: 'ALLOW'>, reasons=('scaffold_allow',), digest='de5a200a89430d2dec7318cf5aea51ee466c45d752e842d6d852e6bed15c045c', metrics={'scaffold': True, 'payload_keys': [], 'budget': 1.0})"
-    }
-  },
-  "dual_run_ok": true,
-  "result": "PASS"
+  "result": "PASS",
+  "scenarios": [
+    {"name": "root_grant_to_attenuated_capability", "expected": "ALLOW"},
+    {"name": "in_scope_edge_use", "expected": "ALLOW"},
+    {"name": "delegated_stricter_child", "expected": "ALLOW"},
+    {"name": "child_method_scope_expansion", "expected": "REFUSE"},
+    {"name": "revoked_capability_use", "expected": "REFUSE"}
+  ]
 }

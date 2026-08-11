@@ -1,0 +1,14 @@
+{
+  "schema": "glaciereq.implementation-proof.v1",
+  "repository": "GlacierEQ/cloudflare-edge-cap-mint",
+  "source_sha": "c7b84391e7668e34550dca0d9c2f94d82daf65e330acf1e8a28ea778025d9dcc",
+  "result": "PASS",
+  "scaffold": false,
+  "behavioral_cases": 8,
+  "adversarial_cases": 14,
+  "direct_operate": true,
+  "proof_origin": "github-actions-self-verifying-artifact",
+  "source_commit": "df2116782827edd752f4dab6f97f33486a31e4b6",
+  "workflow_run_id": 31461779549,
+  "artifact_id": 9090034603
+}

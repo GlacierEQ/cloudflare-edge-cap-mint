@@ -1,0 +1,23 @@
+{
+  "schema": "glaciereq.verification-matrix.v1",
+  "repository": "GlacierEQ/cloudflare-edge-cap-mint",
+  "behavioral_cases": 8,
+  "adversarial_cases": 14,
+  "controls": [
+    {"threat": "route scope expansion", "test": "test_route_scope_expansion_refuses_mint"},
+    {"threat": "method scope expansion", "test": "test_method_scope_expansion_refuses_mint"},
+    {"threat": "region scope expansion", "test": "test_region_scope_expansion_refuses_mint"},
+    {"threat": "request budget amplification", "test": "test_request_budget_expansion_refuses_mint"},
+    {"threat": "delegation amplification", "test": "test_delegation_expansion_refuses_mint"},
+    {"threat": "mint replay", "test": "test_mint_nonce_replay_refuses_second_capability"},
+    {"threat": "request replay", "test": "test_request_nonce_replay_refuses_second_use"},
+    {"threat": "identity/scope borrowing", "test": "test_principal_zone_method_region_and_route_are_independently_bound"},
+    {"threat": "stale capability", "test": "test_expired_and_future_capabilities_fail_closed"},
+    {"threat": "capability tampering", "test": "test_forged_capability_claims_break_digest_binding"},
+    {"threat": "non-finite metadata", "test": "test_non_finite_metadata_refuses_use"},
+    {"threat": "unsupported metadata", "test": "test_unsupported_metadata_type_refuses_use"},
+    {"threat": "delegated re-expansion", "test": "test_delegated_child_cannot_re_expand_parent_method"},
+    {"threat": "leaf-local authority", "test": "test_wrong_external_issuer_refuses_mint"}
+  ],
+  "direct_operate": ["root mint ALLOW", "in-scope use ALLOW", "attenuated child mint ALLOW", "child method expansion REFUSE", "revoked capability use REFUSE"]
+}

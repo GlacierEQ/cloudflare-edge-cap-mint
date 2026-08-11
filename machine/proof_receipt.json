@@ -1,31 +1,16 @@
 {
-  "schema": "glaciereq.proof-receipt.v1",
+  "schema": "glaciereq.proof-receipt.v2",
   "repository": "GlacierEQ/cloudflare-edge-cap-mint",
-  "source_sha": "9bd6fb0ea0996b2bf4d798a1fe27eab55d0ff6ffd64d4ec4f73b3fffb8048309",
-  "proof_id": "elite-cloudflare-edge-cap-mint-1786356645",
-  "environment": {
-    "python": "/Users/kcbflux/.local/bin/python3.11",
-    "PYTHONPATH": "/Users/kcbflux/GlacierEQ_Swarm/job-app/repos/cloudflare-edge-cap-mint:/Users/kcbflux/GlacierEQ_Swarm/job-app/repos/cloudflare-edge-cap-mint/src",
-    "entry": "unittest"
-  },
-  "tests": [
-    "/Users/kcbflux/.local/bin/python3.11 -m unittest discover -s tests -v (x2)"
-  ],
-  "adversarial_tests": [
-    "tests/test_adversarial.py"
-  ],
-  "runtime": {
-    "operate": "scripts/operate.py (x2)",
-    "dual_run_ok": true,
-    "proof_dual_run_ok": true
-  },
+  "source_sha": "c7b84391e7668e34550dca0d9c2f94d82daf65e330acf1e8a28ea778025d9dcc",
+  "source_commit": "df2116782827edd752f4dab6f97f33486a31e4b6",
+  "workflow_run_id": 31461779549,
+  "source_sha_artifact_id": 9090034603,
+  "environment": {"runner": "ubuntu-latest", "python": "3.12"},
+  "commands": ["python -m pytest -q", "python scripts/operate.py", "python scripts/source_sha.py"],
+  "behavioral_cases": 8,
+  "adversarial_cases": 14,
   "result": "PASS",
-  "limitations": [
-    "not production deployed",
-    "reference implementation only"
-  ],
-  "timestamp": "2026-08-10T10:10Z",
-  "artifact_hashes": {
-    "operability_receipt": "7bdeed642fc38995e82282affddf4200be132f3341f696ed7303cc3cdb5d5db6"
-  }
+  "sanitized": true,
+  "absolute_local_paths": false,
+  "limitations": ["reference implementation", "external root-grant cryptographic verification is out of leaf boundary", "no production edge side effects"]
 }

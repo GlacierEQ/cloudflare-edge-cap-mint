@@ -1,20 +1,33 @@
 {
-  "schema": "glaciereq.repo-excellence-scores.v1",
+  "schema": "glaciereq.repo-excellence-scores.v2",
   "repository": "GlacierEQ/cloudflare-edge-cap-mint",
   "never_collapse": true,
   "axes": {
     "target_architecture": {
-      "grade": "B"
+      "grade": "A",
+      "evidence": ["ARCHITECTURE.md", "machine/architecture.json"]
     },
     "current_proof": {
-      "grade": "A"
+      "grade": "A",
+      "evidence": [
+        "machine/implementation-proof.json",
+        "machine/proof_receipt.json",
+        "machine/operability_receipt.json",
+        "CI artifact 9090034603"
+      ]
     },
-    "company_fit": {
-      "score": 0.0
+    "adversarial_depth": {
+      "grade": "A",
+      "cases": 14,
+      "evidence": "machine/verification-matrix.json"
     },
-    "canonical_confidence": {
-      "score": 0.0,
-      "role": "PROMOTED_LEAF"
+    "portfolio_boundary_truth": {
+      "grade": "A",
+      "evidence": "external authority and production boundaries explicitly unclaimed"
+    },
+    "canonical_position": {
+      "status": "PENDING_ESTATE_RESOLUTION",
+      "role": "PROVEN_LEAF_UNPROMOTED"
     }
   }
 }
