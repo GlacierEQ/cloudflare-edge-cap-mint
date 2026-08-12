@@ -1,0 +1,41 @@
+name: Crystallization Behavior Proof
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'scripts/operate.py'
+      - '.github/workflows/crystallization-proof.yml'
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'scripts/operate.py'
+      - '.github/workflows/crystallization-proof.yml'
+permissions:
+  contents: read
+jobs:
+  prove:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Refuse source scaffold masquerading as implementation
+        shell: bash
+        run: |
+          if grep -Rni --include='*.py' 'SCAFFOLD[ _-]*STUB' src; then
+            echo 'Literal scaffold stub remains in executable source.' >&2
+            exit 1
+          fi
+      - name: Install declared test dependencies
+        shell: bash
+        run: |
+          if [[ -f requirements.txt ]]; then python -m pip install -r requirements.txt; fi
+      - name: Execute complete behavioral suite
+        run: python -m pytest -q
+      - name: Execute concrete capability flow
+        run: python scripts/operate.py
